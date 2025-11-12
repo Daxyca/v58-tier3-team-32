@@ -5,6 +5,9 @@ import ColorSample from "./components/ColorSample";
 
 import { HeadlineXL, Subheading1, Subheading2, Headline, Body1, Body2, Caption, Label } from "../component/typography";
 
+import { Button } from "@/components/ui/button";
+import { MapPin, Home, Filter, Users, Copyright, Github} from "lucide-react";
+
 export default function DesignSystemPage() {
   const colors = [
     { name: "Main", color: "#D5F7BC" },
@@ -65,7 +68,42 @@ export default function DesignSystemPage() {
             <Label>Label - Lorem ipsum dolor sit amet.</Label>
           </div>
         </section>
-     
+        <section>
+          <Subheading2 className="mt-8 mb-3 pb-3 border-b-2 border-neutral-400">
+            Components
+          </Subheading2>
+          <Body1 className="mb-3 font-bold">Button Variants</Body1>
+            <div className="flex flex-wrap gap-4 mb-6">
+             <Button variant="default">Default</Button>
+            <Button variant="secondary">Secondary</Button>
+            <Button variant="outline">Outline</Button>
+            <Button variant="link">Link</Button> 
+            </div>
+
+         <Body1 className="mb-3 font-bold">Icon Buttons</Body1>
+          <div className="flex flex-wrap gap-4">
+          <Button size="icon" variant="secondary" title="Map Search">
+              <MapPin />
+          </Button> 
+          
+              <Button size="icon" variant="outline" title="Filter Users">
+              <Filter />
+          </Button>
+          <Button size="icon" variant="outline" title="c-icon">
+              <Copyright />
+              
+              <Button size="icon" variant="outline" title="github">
+              <Github/>
+          </Button>
+          </Button>
+          <Button size="icon" variant="outline" title="Home">
+              <Home />
+          </Button>
+          <Button className="bg-teal-500 text-black hover:bg-teal-600" title="Community">
+              <Users />
+          </Button> 
+          </div>            
+        </section>     
       </main>
     </PageWrapper>
   );
