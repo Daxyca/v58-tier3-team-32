@@ -41,7 +41,7 @@ export default function MapPageClient() {
         <Divider />
         {/* Map */}
         <div className="h-[80vh]">
-          <MapView filters={filters} />
+          <MapView />
         </div>
       </main>
     </PageWrapper>
